@@ -1,0 +1,28 @@
+{
+  "name": "node-red-auth-pam",
+  "version": "1.0.0",
+  "description": "Provides an authentication mechanism for NodeRED based on PAM",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netsmarttech/node-red-auth-pam.git"
+  },
+  "keywords": [
+    "node-red",
+    "pam",
+    "auth"
+  ],
+  "author": "Guilherme Francescon <guilherme.francescon@netsmarttech.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/netsmarttech/node-red-auth-pam/issues"
+  },
+  "homepage": "https://github.com/netsmarttech/node-red-auth-pam#readme",
+  "dependencies": {
+    "authenticate-pam": "^1.0.2",
+    "when": "^3.7.8"
+  }
+}
