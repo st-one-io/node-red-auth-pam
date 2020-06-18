@@ -1,9 +1,10 @@
-node-red-auth-pam
-=================
+# node-red-auth-pam
+
 Provides an authentication mechanism for NodeRED based on PAM on Linux
 
-Installing
-----------
+
+## Installing
+
 This requires authenitcate-pam, that requires PAM headers for compilation. Install the package `libpam0g-dev` with your favorite package manager. On Debian-based distros:
 
      sudo apt-get install libpam0g-dev
@@ -12,8 +13,8 @@ Then install this package on the folder your `settings.js` is located, typically
 
      npm install node-red-auth-pam
 
-Usage
------
+
+## Usage
 
 Just require the module and call the returning function, setting the result to `adminAuth`, as the example below:
 
@@ -26,15 +27,17 @@ Just require the module and call the returning function, setting the result to `
     // the static content (httpStatic), the following properties can be used.
     // ...
 
-Limitations
----------------
+
+## Limitations
+
  - All authenticated users have full access, i.e. no permissions control
 
- Bugs and enhancements
------------
 
-Please open an issue on the [page of the project on GitHub](https://github.com/netsmarttech/node-red-auth-pam). There's also a [Node-RED mail group](https://groups.google.com/forum/#!forum/node-red) on GoogleGroups
+## Bugs and enhancements
 
-License
------------
-Copyright 2017 Smart-Tech, [Apache 2.0 license](LICENSE).
+Please open an issue on the [page of the project on GitHub](https://github.com/netsmarttech/node-red-auth-pam), or reach out on the [Node-RED forum](https://discourse.nodered.org/).
+
+
+## License
+
+Copyright 2017-2020 Smart-Tech, [Apache 2.0 license](LICENSE).
