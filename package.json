@@ -1,6 +1,6 @@
 {
   "name": "node-red-auth-pam",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Provides an authentication mechanism for NodeRED based on PAM",
   "main": "src/index.js",
   "scripts": {
