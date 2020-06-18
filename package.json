@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/netsmarttech/node-red-auth-pam#readme",
   "dependencies": {
-    "authenticate-pam": "^1.0.2",
-    "when": "^3.7.8"
+    "authenticate-pam": "github:artynet/node-authenticate-pam"
   }
 }
