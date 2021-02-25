@@ -24,8 +24,8 @@ const _authenticate = (u, p) => new Promise(res => {
     pam.authenticate(u, p, err => res(err), { serviceName: 'node-red', remoteHost: 'localhost' });
 });
 
-module.exports = function (opts = {}) {
-    //opts not used now, but allows future expansions/configurations
+module.exports = function (opts = { users: [] }) {
+    //opts used for username to permission mapping
     return {
         type: "credentials",
         async users(username) {
@@ -39,11 +39,13 @@ module.exports = function (opts = {}) {
                 usersMap.delete(username);
                 return null;
             } else {
-                let user = {
-                    username: username,
-                    permissions: "*"
-                }
-                util.log(`UserAuth - authenticate - ${JSON.stringify(user)}`);
+                let user = opts.users.find(e => e.username === username);
+				if (user === undefined) {
+	                util.log(`UserAuth - authenticate - ${username}  authenticated, but no permissions`);
+					usersMap.delete(username);
+					return null;
+				}
+				util.log(`UserAuth - authenticate - ${JSON.stringify(user)}`);
                 usersMap.set(username, user);
                 return user;
             }
