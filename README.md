@@ -21,8 +21,11 @@ Just require the module and call the returning function, setting the result to `
     // ...
     //    }]
     //},
-    adminAuth: require('node-red-auth-pam')(),
-
+    adminAuth: require('node-red-auth-pam')(
+	{ users: [
+		{ username: "admin", permissions:"*" },
+		{ username: "user", permissions: "read" }
+	]}),
     // To password protect the node-defined HTTP endpoints (httpNodeRoot), or
     // the static content (httpStatic), the following properties can be used.
     // ...
@@ -30,7 +33,7 @@ Just require the module and call the returning function, setting the result to `
 
 ## Limitations
 
- - All authenticated users have full access, i.e. no permissions control
+ - User and linux PAM user need to be aligned
 
 
 ## Bugs and enhancements
