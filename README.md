@@ -33,7 +33,7 @@ Just require the module and call the returning function, setting the result to `
 
 ## Limitations
 
- - User and linux PAM user need to be aligned
+ - Usermap and linux PAM user need to be aligned
 
 
 ## Bugs and enhancements
